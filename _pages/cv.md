@@ -11,21 +11,18 @@ redirect_from:
 
 Education
 ======
-* B.S. in GitHub, GitHub University, 2012
-* M.S. in Jekyll, GitHub University, 2014
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
+* MSc Physics, Imperial College London, 2018-2019
+* General Engineering diploma, Ecole Centrale de Lyon, 2015-2019
 
 Work experience
 ======
-* Summer 2015: Research Assistant
-  * Github University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
+* May-October 2017: Research Internship
+  * Irfu, CEA Saclay
+  * I contributed to the development of the use of Micromegas gaseous detectors for X-ray spectro-polarimetry. I took part in 3 aspects of the development:
+    * Manufacturing process
+    * Performance tests with different gases under different pressures
+    * Analysis of data taken at the SOLEIL synchrotron to calibrate a detector.
 
-* Fall 2015: Research Assistant
-  * Github University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
   
 Skills
 ======
@@ -48,12 +45,12 @@ Talks
     {% include archive-single-talk-cv.html %}
   {% endfor %}</ul>
   
-Teaching
+<!-- Teaching
 ======
   <ul>{% for post in site.teaching %}
     {% include archive-single-cv.html %}
-  {% endfor %}</ul>
+  {% endfor %}</ul> -->
   
-Service and leadership
+<!-- Service and leadership
 ======
-* Currently signed in to 43 different slack teams
+* Currently signed in to 43 different slack teams -->

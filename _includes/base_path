@@ -1,5 +1,9 @@
-{% if site.url %}
-  {% assign base_path = site.url | append: site.baseurl %}
+{% if jekyll.environment == "production" %}
+  {% if site.url %}
+    {% assign base_path = site.url | append: site.baseurl %}
+  {% else %}
+    {% assign base_path = site.github.url %}
+  {% endif %}
 {% else %}
-  {% assign base_path = site.github.url %}
+  {% assign base_path = "http://localhost:4000" %}
 {% endif %}

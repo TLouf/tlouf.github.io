@@ -2,7 +2,6 @@
 title: "Bilingual societies: from data to agent-based modeling"
 collection: talks
 type: "Talk"
-# permalink: /talks/2012-03-01-talk-1
 venue: "Computational Social Science satellite of the Conference on Complex Systems"
 date: 2020-12-09
 location: "online"

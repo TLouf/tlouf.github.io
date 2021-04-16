@@ -1,0 +1,53 @@
+{% include base_path %}
+
+{% if post.header.teaser %}
+  {% capture teaser %}{{ post.header.teaser }}{% endcapture %}
+{% else %}
+  {% assign teaser = site.teaser %}
+{% endif %}
+
+{% if post.id %}
+  {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
+{% else %}
+  {% assign title = post.title %}
+{% endif %}
+
+<div class="{{ include.type | default: "list" }}__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+
+    <h3 class="archive__item-title" itemprop="headline">
+      <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ title }}</a>
+      {% if post.arxivId %}
+        &nbsp;
+        [
+        <a class="hidden__link" href="https://arxiv.org/abs/{{ post.arxivId }}"><i class="ai ai-arxiv" aria-hidden="true"></i></a> 
+        <a class="hidden__link" href="https://arxiv.org/pdf/{{ post.arxivId }}.pdf"><i class="fas fa-file-pdf" aria-hidden="true"></i></a>
+        ]
+      {% endif %}
+    </h3>
+    
+
+    {% if post.printdate %}
+    <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> {{ post.printdate }}</p>
+    {% endif %}
+
+    <p>
+      <i class="fas fa-fw fa-user-edit" aria-hidden="true"></i>
+      <b>Authors:</b>
+      {{ post.authors }}
+    </p>
+
+    {% if post.venue %}
+    <p>
+      <i class="fas fa-fw fa-newspaper" aria-hidden="true"></i>
+      <b>In:</b> 
+      {% if post.paperurl %}
+        <a href="{{ post.paperurl }}">{{ post.venue }} </a>
+      {% else %}
+        {{ post.venue }}
+      {% endif %}
+    </p>
+    {% endif %}
+
+  </article>
+</div>

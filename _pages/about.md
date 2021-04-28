@@ -17,7 +17,7 @@ redirect_from:
     <p class="hidden__link"><a href="{{ author.googlescholar }}"><i class="ai ai-google-scholar ai-fw"></i></a></p>
     <p class="hidden__link"><a href="https://github.com/{{ author.github }}"><i class="fab fa-github"></i></a></p>
     <p class="hidden__link"><a href="{{ author.researchgate }}"><i class="fab fa-fw fa-researchgate" aria-hidden="true"></i></a></p>
-    <p class="hidden__link"><a href="{{ author.orcid }}"><i class="ai ai-orcid ai-fw"></i></a></p>
+    <p class="hidden__link"><a href="https://orcid.org/{{ author.orcid }}"><i class="ai ai-orcid ai-fw"></i></a></p>
     <p class="hidden__link"><a href="{{ author.figshare }}"><i class="ai ai-figshare ai-fw"></i></a></p>
     <p class="hidden__link"><a href="{{ author.instituteurl }}"><i class="fa fa-fw fa-university" aria-hidden="true"></i></a></p>
   </div>

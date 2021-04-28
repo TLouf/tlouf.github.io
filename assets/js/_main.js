@@ -27,11 +27,7 @@ $(document).ready(function(){
   $(".sticky").Stickyfill();
 
   var stickySideBar = function(){
-    var show = $(".author__urls-wrapper button").length === 0 ? $(window).width() > 1024 : !$(".author__urls-wrapper button").is(":visible");
-    // console.log("has button: " + $(".author__urls-wrapper button").length === 0);
-    // console.log("Window Width: " + windowWidth);
-    // console.log("show: " + show);
-    //old code was if($(window).width() > 1024)
+    var show = $(".author__urls-wrapper #follow_btn").length === 0 ? $(window).width() > 1024 : !$(".author__urls-wrapper #follow_btn").is(":visible");
     if (show) {
       // fix
       Stickyfill.rebuild();
@@ -52,9 +48,9 @@ $(document).ready(function(){
 
   // Follow menu drop down
 
-  $(".author__urls-wrapper button").on("click", function() {
+  $(".author__urls-wrapper #follow_btn").on("click", function() {
     $(".author__urls").fadeToggle("fast", function() {});
-    $(".author__urls-wrapper button").toggleClass("open");
+    $(".author__urls-wrapper #follow_btn").toggleClass("open");
   });
 
   // init smooth scroll

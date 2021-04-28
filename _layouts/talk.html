@@ -26,23 +26,34 @@ layout: default
     <div class="page__inner-wrap">
       {% unless page.header.overlay_color or page.header.overlay_image %}
         <header>
-          {% if page.title %}<h1 class="page__title" itemprop="headline">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</h1>{% endif %}
-          {% if page.read_time %}
-            <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</p>
-          {% endif %}
-        {% if page.modified %}
-          <p class="page__date"><strong><i class="fa fa-fw fa-calendar-alt" aria-hidden="true"></i>Date:</strong> <time datetime="{{ page.modified | date: "%Y-%m-%d" }}">{{ page.modified | date: "%B %d, %Y" }}</time></p>
-        {% elsif page.date %}
-          <p class="page__date"><strong><i class="fa fa-fw fa-calendar-alt" aria-hidden="true"></i>Date:</strong> <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time></p>
+        {% if page.title %}
+          <h1 class="page__title" itemprop="headline">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</h1>
         {% endif %}
-        {% if page.talk_type %}<p>{{page.talk_type}} at {{ page.venue }},  {{page.location}} {% endif %}
-
+        {% if page.date %}
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar-alt" aria-hidden="true"></i> Date: </strong>{{ page.date | date: "%B %d, %Y" }}</p>
+        {% endif %}
+        {% if page.venue %}
+        <p>
+          <i class="fas fa-fw fa-globe" aria-hidden="true"></i>
+          <b>Venue:</b> 
+          {% if page.venueurl %}
+            <a href="{{ page.venueurl }}">{{ page.venue }},</a>
+          {% else %}
+            {{ page.venue }},
+          {% endif %}
+          {{ page.location }}
+        </p>
+        {% endif %}
         </header>
       {% endunless %}
 
       <section class="page__content" itemprop="text">
         {{ content }}
         {% if page.link %}<div><a href="{{ page.link }}" class="btn">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
+        {% if page.video %}
+        <h2>Video</h2>
+        <iframe width="720" height="585" src="{{ page.video }}" frameborder="0" allowfullscreen></iframe>
+        {% endif %}
       </section>
 
       <footer class="page__meta">

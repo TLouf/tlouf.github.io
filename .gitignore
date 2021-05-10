@@ -1,4 +1,4 @@
 _site/
 .venv/
 .vscode
-markdown_generator/.ipynb_checkpoints/*
+*/.ipynb_checkpoints

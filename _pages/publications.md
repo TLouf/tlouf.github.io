@@ -23,6 +23,17 @@ author_profile: true
 
 
 <h2 itemprop="headline">
+  Preprints
+</h2>
+{% for post in site.publications reversed %}
+  {% if post.type == "unpublished" %}
+    {% include archive-single-publication.html %}
+  {% endif %}
+  ---
+{% endfor %}
+
+
+<h2 itemprop="headline">
   Conference proceedings
 </h2>
 {% for post in site.publications reversed %}

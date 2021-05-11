@@ -4,9 +4,9 @@ print_date: "December, 2020"
 title: "Dynamic noise maps for Ljubljana airport"
 permalink: "/publication/2020-12-Dynamic-noise-maps-for-Ljubljana-airport"
 type: "inproceedings"
-citation: "Louf, T., Sanchez, D.,  Ramasco, J.J. (2021).
-<em>Capturing the diversity of multilingual societies</em>.
-Submitted."
+citation: "Ganić, E., van Oosten, N., Meliveo, L., Jeram, S., Louf, T.,  Ramasco, J.J. (2020).
+Dynamic noise maps for Ljubljana airport.
+<em>10th SESAR Innovation Days</em>."
 venue: "10th SESAR Innovation Days"
 authors: "Emir Ganić, Nico Oosten, Luis Meliveo, Sonja Jeram, <b>Thomas Louf</b>, Jose J. Ramasco"
 paperurl: "http://hdl.handle.net/10261/229353"

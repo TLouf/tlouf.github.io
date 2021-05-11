@@ -451,3 +451,14 @@
   font-size: $type-size-6;
   text-transform: uppercase;
 }
+
+
+.page__publications {
+  div + div {
+    margin-top: 2em;
+  }
+
+  p + p {
+    margin-top: 0.2em;
+  }
+}

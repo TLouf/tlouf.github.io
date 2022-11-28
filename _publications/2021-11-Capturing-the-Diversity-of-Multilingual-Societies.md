@@ -1,8 +1,8 @@
 ---
 collection: "publications"
 print_date: "November, 2021"
-title: "Capturing the diversity of multilingual societies"
-permalink: "/publication/2021-11-Capturing-the-diversity-of-multilingual-societies"
+title: "Capturing the Diversity of Multilingual Societies"
+permalink: "/publication/2021-11-Capturing-the-Diversity-of-Multilingual-Societies"
 citation: "Louf, T., Sánchez, D.,  Ramasco, J.J.
 (2021).
 Capturing the diversity of multilingual societies.

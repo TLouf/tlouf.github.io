@@ -27,6 +27,9 @@
           <button class="copybtn" title="Copy email" data-clipboard-text="{{ author.email }}"><i class="far fa-clone"></i></button>
         </li>
       {% endif %}
+      {% if author.mastodon %}
+        <li><a rel="me" href="{{ author.mastodon }}"><i class="fab fa-fw fa-mastodon" aria-hidden="true"></i> Mastodon</a></li>
+      {% endif %}
       {% if author.twitter %}
         <li><a href="https://twitter.com/{{ author.twitter }}"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
       {% endif %}

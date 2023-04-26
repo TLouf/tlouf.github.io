@@ -37,6 +37,9 @@ redirect_from:
   {% if author.orcid %}
     <p class="hidden__link"><a href="https://orcid.org/{{ author.orcid }}"><i class="ai ai-orcid ai-fw"></i></a></p>
   {% endif %}
+  {% if author.osf %}
+    <p class="hidden__link"><a href="{{ author.osf }}"><i class="ai ai-osf ai-fw"></i></a></p>
+  {% endif %}
   {% if author.figshare %}
     <p class="hidden__link"><a href="{{ author.figshare }}"><i class="ai ai-figshare ai-fw"></i></a></p>
   {% endif %}

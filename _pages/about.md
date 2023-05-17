@@ -11,7 +11,7 @@ redirect_from:
 {% assign author = site.author %}
 <!-- This is what will be shown when shrinking the view: only the icons -->
 <div class="hidden__avatar">
-  <img src="{{ author.avatar | prepend: "/images/" | prepend: base_path }}" alt="{{ author.name }}">
+  <img src="{{ author.avatar | prepend: "/assets/images/" | prepend: base_path }}" alt="{{ author.name }}">
 <div>
   {% if author.email %}
     <p class="hidden__link"><a href="mailto:{{ author.email }}"><i class="fas fa-fw fa-envelope"></i></a></p>

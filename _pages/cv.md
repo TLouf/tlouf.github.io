@@ -9,6 +9,10 @@ redirect_from:
 
 {% include base_path %}
 
+
+<object data="{{ site.url }}{{ site.baseurl }}/assets/pdf/CV.pdf" width="100" height="100" type="application/pdf"></object>
+
+<!-- 
 Education
 ======
 * MSc Physics, Imperial College London, 2018-2019
@@ -44,8 +48,8 @@ Talks
   <ul>{% for post in site.talks %}
     {% include archive-single-talk-cv.html %}
   {% endfor %}</ul>
-  
-<!-- Teaching
+
+Teaching
 ======
   <ul>{% for post in site.teaching %}
     {% include archive-single-cv.html %}

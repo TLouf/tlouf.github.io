@@ -10,7 +10,7 @@ redirect_from:
 {% include base_path %}
 
 
-<object data="{{ site.url }}{{ site.baseurl }}/assets/pdf/CV.pdf" width="100" height="100" type="application/pdf"></object>
+<object data="{{ site.url }}{{ site.baseurl }}/CV/CV.pdf" width="100" height="100" type="application/pdf"></object>
 
 <!-- 
 Education

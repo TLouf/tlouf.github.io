@@ -5,7 +5,7 @@ venue: "Physical Review Research"
 print_date: "November 30, 2021"
 title: "Capturing the Diversity of Multilingual Societies"
 permalink: "/publications/2021-11-30-Capturing-the-Diversity-of-Multilingual-Societies"
-authors: "<b>Thomas Louf</b>, David Sánchez, José J. Ramasco"
+authors: "<span class='author_is_me'>Thomas Louf</span>, David Sánchez, José J. Ramasco"
 paperurl: "https://doi.org/10.1103/PhysRevResearch.3.043146"
 citation: "Louf, T., Sánchez, D.,  Ramasco, J.J.
 (2021).

@@ -12,7 +12,7 @@
 # * any specific pre-text for specific files
 # * Collection Name (future feature)
 
-# In[41]:
+# In[1]:
 
 
 from pathlib import Path
@@ -22,13 +22,13 @@ from datetime import datetime
 import re
 
 
-# In[42]:
+# In[2]:
 
 
 project_root = Path("..")
 
 
-# In[43]:
+# In[3]:
 
 
 html_escape_table = {
@@ -42,7 +42,7 @@ def html_escape(text):
     return "".join(html_escape_table.get(c,c) for c in text)
 
 
-# In[44]:
+# In[4]:
 
 
 from pybtex.plugin import find_plugin
@@ -78,7 +78,7 @@ def text_to_HTML(text):
 #     return [entry.text.render(MD).replace('<span class="bibtex-protected">', '').replace('</span>', '') for entry in formattedBib]
 
 
-# In[64]:
+# In[5]:
 
 
 pubs = pybtex.database.parse_file(project_root / 'CV' / 'me.bib')
@@ -155,7 +155,7 @@ for i, (bib_id, p) in enumerate(pubs.entries.items()):
     authors = ', '.join([' '.join(a) for a in author_iter])
     authors = text_to_HTML(pybtex.richtext.Text.from_latex(authors))
     start_idx = authors.find(my_name)
-    bolded = f'<b>{my_name}</b>'
+    bolded = f"<span class='author_is_me'>{my_name}</span>"
     authors = authors[:start_idx] + bolded + authors[start_idx+len(my_name):]
     yaml_dict['authors'] = authors
 

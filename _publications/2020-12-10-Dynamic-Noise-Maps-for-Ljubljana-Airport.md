@@ -5,7 +5,7 @@ venue: "10th SESAR Innovation Days"
 print_date: "December 10, 2020"
 title: "Dynamic Noise Maps for Ljubljana Airport"
 permalink: "/publications/2020-12-10-Dynamic-Noise-Maps-for-Ljubljana-Airport"
-authors: "Emir Ganić, Nico Oosten, Luis Meliveo, Sonja Jeram, <b>Thomas Louf</b>, Jose J. Ramasco"
+authors: "Emir Ganić, Nico Oosten, Luis Meliveo, Sonja Jeram, <span class='author_is_me'>Thomas Louf</span>, Jose J. Ramasco"
 paperurl: "https://doi.org/10.5281/zenodo.5517304"
 citation: "Ganić, E., van Oosten, N., Meliveo, L., Jeram, S., Louf, T.,  Ramasco, J.J. (2020).
 Dynamic noise maps for Ljubljana airport.

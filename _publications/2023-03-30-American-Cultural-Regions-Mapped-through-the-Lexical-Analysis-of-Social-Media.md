@@ -5,7 +5,7 @@ venue: "Humanities and Social Sciences Communications"
 print_date: "March 30, 2023"
 title: "American Cultural Regions Mapped through the Lexical Analysis of Social Media"
 permalink: "/publications/2023-03-30-American-Cultural-Regions-Mapped-through-the-Lexical-Analysis-of-Social-Media"
-authors: "<b>Thomas Louf</b>, Bruno Gonçalves, José J. Ramasco, David Sánchez, Jack Grieve"
+authors: "<span class='author_is_me'>Thomas Louf</span>, Bruno Gonçalves, José J. Ramasco, David Sánchez, Jack Grieve"
 paperurl: "https://doi.org/10.1057/s41599-023-01611-3"
 citation: "Louf, T., Gonçalves, B., Ramasco, J.J., Sánchez, D.,  Grieve, J.
 (2023).

@@ -13,37 +13,52 @@ author_profile: true
 
 
 <div class="page__publications">
-<div class="pubtype">
-  <h2 itemprop="headline">
-    Journal articles
-  </h2>
-  {% for post in site.publications reversed %}
-    {% if post.type == "article" %}
-      {% include archive-single-publication.html %}
-    {% endif %}
-  {% endfor %}
-</div>
+  {% assign articles = site.publications | where: "type", "article" %}
+  {% if articles.size != 0 %}
+    <div class="pubtype">
+      <h2 itemprop="headline">
+        Journal articles
+      </h2>
+      {% for post in articles reversed %}
+        {% include archive-single-publication.html %}
+      {% endfor %}
+    </div>
+  {% endif %}
+  
+  {% assign chaps = site.publications | where: "type", "incollection" %}
+  {% if chaps.size != 0 %}
+    <div class="pubtype">
+      <h2 itemprop="headline">
+        Book chapters
+      </h2>
+      {% for post in chaps reversed %}
+        {% include archive-single-publication.html %}
+      {% endfor %}
+    </div>
+  {% endif %}
 
-<div class="pubtype">
-  <h2 itemprop="headline">
-    Preprints
-  </h2>
-  {% for post in site.publications reversed %}
-    {% if post.type == "misc" or post.type == "unpublished" %}
-      {% include archive-single-publication.html %}
-    {% endif %}
-  {% endfor %}
-</div>
+  {% assign preprints = site.publications | where: "type", "online" %}
+  {% if preprints.size != 0 %}
+    <div class="pubtype">
+      <h2 itemprop="headline">
+        Preprints
+      </h2>
+      {% for post in preprints reversed %}
+        {% include archive-single-publication.html %}
+      {% endfor %}
+    </div>
+  {% endif %}
 
-<div class="pubtype">
-  <h2 itemprop="headline">
-    Conference proceedings
-  </h2>
-  {% for post in site.publications reversed %}
-    {% if post.type == "inproceedings" %}
-      {% include archive-single-publication.html %}
-    {% endif %}
-  {% endfor %}
-</div>
+  {% assign confs = site.publications | where: "type", "inproceedings" %}
+  {% if confs.size != 0 %}
+    <div class="pubtype">
+      <h2 itemprop="headline">
+        Conference proceedings
+      </h2>
+      {% for post in confs reversed %}
+        {% include archive-single-publication.html %}
+      {% endfor %}
+    </div>
+  {% endif %}
 
 </div>

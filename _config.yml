@@ -166,7 +166,7 @@ collections:
   publications:
     output: true
     permalink: /:collection/:path/
-  portfolio:
+  visualizations:
     output: true
     permalink: /:collection/:path/
   talks:
@@ -215,7 +215,7 @@ defaults:
   # _portfolio
   - scope:
       path: ""
-      type: portfolio
+      type: visualizations
     values:
       layout: single
       author_profile: true

@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/tlouf
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://tlouf.github.io
+  * I am tlouf (https://keybase.io/tlouf) on keybase.
+  * I have a public key ASC7dD5aFkDxlkBgcbS_ZHDU3_raqJ1XzEMQwMXjySwtQQo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120bb743e5a1640f196406071b4bf6470d4dffadaa89d57cc4310c0c5e3c92c2d410a",
+      "host": "keybase.io",
+      "kid": "0120bb743e5a1640f196406071b4bf6470d4dffadaa89d57cc4310c0c5e3c92c2d410a",
+      "uid": "9a3850f2a94f698d54a07bcde4a5e719",
+      "username": "tlouf"
+    },
+    "merkle_root": {
+      "ctime": 1696772873,
+      "hash": "2a1933de1a384aa3956a750a5f939fb3d8e181dd07965035ff6bed3215f66f0235198f0fe75bf7df1c5bab6345c9267c58c74a51ff38162031459cb6d2f79d78",
+      "hash_meta": "39d4806b1735a6cca445b10be5fbd7b719a97bf88bded82e5480173ff1978b20",
+      "seqno": 25008532
+    },
+    "service": {
+      "entropy": "e2NUoQpmW2w7IudpwuYCWbs8",
+      "hostname": "tlouf.github.io",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "6.0.2"
+  },
+  "ctime": 1696772883,
+  "expire_in": 504576000,
+  "prev": "0808b8b336d278a9d866288830c995af366832394377f97f17157be0df5d853a",
+  "seqno": 15,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgu3Q+WhZA8ZZAYHG0v2Rw1N/62qidV8xDEMDF48ksLUEKp3BheWxvYWTESpcCD8QgCAi4szbSeKnYZiiIMMmVrzZoMjlDd/l/FxV74N9dhTrEIOK2PWbAzH0uD8uiuz6kpDWOF+qGj4PYyMKRa+HQrHqaAgHCo3NpZ8RA0gURurAn822gJc4csxz9pMhcBTMt48e20MgD+IOGp8YvZ+L6/Hca/Ohs6QPVFP1paq3CQ5VlCbLLmavadkKeBqhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIK3hlp4C7iw+9u7aVkj3wVgUjZihsT9SYRFyP2CW2LGco3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/tlouf
+
+==================================================================

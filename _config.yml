@@ -80,14 +80,14 @@ analytics:
 
 # Site Author
 author:
-  name             : 
+  name             :
   avatar           : "twitter_profile.jpg"
-  bio              : "PhD student"
-  location         : "Palma, Spain"
-  institute        : "IFISC"
-  instituteurl     : "https://ifisc.uib-csic.es/"
+  bio              : "Postdoc researcher"
+  location         : "Trento, Italy"
+  institute        : "CHuB Lab"
+  instituteurl     : "https://chub.fbk.eu/"
   googlescholar    : "https://scholar.google.com/citations?user=sh5mm9YAAAAJ&hl=en"
-  email            : "thomaslouf@ifisc.uib-csic.es"
+  email            : "tlouf@fbk.eu"
   researchgate     : "https://www.researchgate.net/profile/Thomas_Louf"
   uri              :
   github           : "TLouf"
@@ -95,7 +95,7 @@ author:
   orcid            : "0000-0002-8785-8063"
   stackoverflow    : # http://stackoverflow.com/users/123456/username
   mastodon         : "https://fosstodon.org/@tlouf"
-  twitter          : 
+  twitter          :
   youtube          :
   wikipedia        :
   figshare         : "https://figshare.com/authors/Thomas_Louf/9441395"

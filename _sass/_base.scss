@@ -6,7 +6,7 @@
     position: relative;
     min-height: 100%;
   }
-  
+
   body {
     margin: 0;
     padding: 0;
@@ -15,150 +15,151 @@
     font-family: $global-font-family;
     line-height: 1.6;
     font-weight: 400;
-  
+
     &.overflow--hidden {
       /* when primary navigation is visible, the content in the background won't scroll */
       overflow: hidden;
     }
   }
-  
+
   h1, h2, h3, h4, h5, h6 {
     margin: 0.3em 0 0.3em;
     line-height: 1.2;
     font-family: $header-font-family;
     font-weight: bold;
   }
-  
+
   h1 {
     margin-top: 0.3em;
-    margin-bottom: 0.3em;
+    margin-bottom: 2em;
     font-size: $type-size-2;
   }
-  
+
   h2 {
+    margin-top: 1.5em;
     font-size: $type-size-3;
   }
-  
+
   h3 {
-    margin-top: 0.5em;
+    margin-top: 0.75em;
     margin-bottom: 0em;
     font-size: $type-size-4;
   }
-  
+
   h4 {
     margin-top: 0.5em;
     margin-bottom: 0em;
     font-size: $type-size-5;
   }
-  
+
   h5 {
     font-size: $type-size-6;
   }
-  
+
   h6 {
     font-size: $type-size-6;
   }
-  
+
   small, .small {
     font-size: $type-size-6;
   }
-  
+
   p {
     margin-top: 0.7em;
-    margin-bottom: 0.4em;
+    margin-bottom: 0em;
   }
-  
+
   u,
   ins {
     text-decoration: none;
     // border-bottom: 1px solid $text-color;
     a {
       color: inherit;
-  
+
     }
   }
-  
+
   del a {
     color: inherit;
   }
-  
+
   /* reduce orphans and widows when printing */
-  
+
   ul {
     margin-top: 0.3em;
     margin-bottom: 0.5em;
     padding-inline-start: 1.2em;
   }
-  
+
   ol {
     padding-inline-start: 1em;
     margin-top: 0.5em;
   }
-  
+
   p, pre, blockquote, ul, ol, dl, figure, table, fieldset {
     orphans: 3;
     widows: 3;
   }
-  
+
   /* abbreviations */
-  
+
   abbr[title],
   abbr[data-original-title] {
     text-decoration: none;
     cursor: help;
     border-bottom: 1px dotted $text-color;
   }
-  
+
   /* blockquotes */
-  
+
   blockquote {
     margin: 2em 1em 2em 0;
     padding-left: 1em;
     padding-right: 1em;
     font-style: italic;
     border-left: 0.25em solid $primary-color;
-  
+
     cite {
       font-style: italic;
-  
+
       &:before {
         content: "\2014";
         padding-right: 5px;
       }
     }
   }
-  
+
   /* links */
-  
+
   a {
     text-decoration: none;
     &:focus {
       @extend %tab-focus;
     }
-  
-  
+
+
     &:hover {
       text-decoration: underline;
       opacity: 0.7;
       transition-duration: 0.1s;
     }
-  
+
     // &:hover,
     &:active {
       outline: 0;
     }
   }
-  
+
   /* code */
-  
+
   tt, code, kbd, samp, pre {
     font-family: $monospace;
   }
-  
+
   pre {
     overflow-x: auto; /* add scrollbars to wide code blocks*/
   }
-  
+
   p > code,
   a > code,
   li > code,
@@ -171,42 +172,42 @@
     border: 1px solid $lighter-gray;
     border-radius: $border-radius;
     box-shadow: $box-shadow;
-  
+
     &:before, &:after {
       letter-spacing: -0.2em;
       content: "\00a0"; /* non-breaking space*/
     }
   }
-  
+
   /* horizontal rule */
-  
+
   hr {
     display: block;
     margin: 0.1em 0;
     border: 0;
     border-top: 1px solid $border-color;
   }
-  
+
   /* lists */
-  
+
   ul li,
   ol li {
     padding-left: 0px;
     margin-top: 0.3em;
     margin-bottom: 0.3em;
   }
-  
+
   li ul,
   li ol {
     margin-top: 0.3em;
   }
-  
+
   /*
      Media and embeds
      ========================================================================== */
-  
+
   /* Figures and images */
-  
+
   figure {
     display: -webkit-box;
     display: flex;
@@ -216,24 +217,24 @@
             align-items: flex-start;
     flex-wrap: wrap;
     margin: 2em 0;
-  
+
     img,
     iframe,
     .fluid-width-video-wrapper {
       margin-bottom: 1em;
     }
-  
+
     img {
       width: 100%;
       border-radius: $border-radius;
       -webkit-transition: $global-transition;
       transition: $global-transition;
     }
-  
+
     > a {
       display: block;
     }
-  
+
     &.half {
       > a,
       > img {
@@ -241,12 +242,12 @@
           width: calc(50% - 0.5em);
         }
       }
-  
+
       figcaption {
         width: 100%;
       }
     }
-  
+
     &.third {
       > a,
       > img {
@@ -254,46 +255,46 @@
           width: calc(33.3333% - 0.5em);
         }
       }
-  
+
       figcaption {
         width: 100%;
       }
     }
   }
-  
+
   /* Figure captions */
-  
+
   figcaption {
     margin-bottom: 0.5em;
     color: mix(#fff, $text-color, 25%);
     font-family: $caption-font-family;
     font-size: $type-size-6;
-  
+
     a {
       color: inherit;
       border-bottom: 1px solid $light-gray;
       -webkit-transition: $global-transition;
       transition: $global-transition;
-  
+
       &:hover {
         color: #000;
         border-bottom-color: #000;
       }
     }
   }
-  
-  
+
+
   /* Fix IE9 SVG bug */
-  
+
   svg:not(:root) {
     overflow: hidden;
   }
-  
-  
+
+
   /*
      Navigation lists
      ========================================================================== */
-  
+
   /**
    * Removes margins, padding, and bullet points from navigation lists
    *
@@ -306,49 +307,49 @@
    *    </ul>
    *  </nav>
    */
-  
+
   nav {
     ul {
       margin: 0;
       padding: 0;
     }
-  
+
     li {
       list-style: none;
     }
-  
+
     a {
-  
+
       &:hover {
         opacity: 1;
       }
     }
-  
+
     /* override white-space for nested lists */
     ul li,
     ol li {
       margin-bottom: 0;
     }
-  
+
     li ul,
     li ol {
       margin-top: 0;
     }
   }
-  
+
   /*
      Global animation transition
      ========================================================================== */
-  
+
   b, i, strong, em, blockquote, p, q, span, figure, img, h1, h2, header, input, a, tr, td, form button, input[type="submit"], .btn, .highlight, .archive__item-teaser {
     -webkit-transition: $global-transition;
     transition: $global-transition;
   }
-  
+
   img{
-  
+
   }
-  
+
   .author_is_me {
     text-decoration: underline;
   }

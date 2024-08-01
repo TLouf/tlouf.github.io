@@ -36,6 +36,7 @@
 
 .page__title {
   margin-top: 0;
+  margin-bottom: 1em;
   line-height: 1;
 
   & + .page__meta {
@@ -454,9 +455,9 @@
 
 
 .page__publications {
-  div + div {
-    margin-top: 2em;
-  }
+//   div + div {
+//     margin-top: 2em;
+//   }
 
   p + p {
     margin-top: 0.2em;

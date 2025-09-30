@@ -88,7 +88,7 @@ author:
   instituteurl     : "https://www.uc3m.es/departamento-matematicas"
   googlescholar    : "https://scholar.google.com/citations?user=sh5mm9YAAAAJ&hl=en"
   email            : "tlouf@math.uc3m.es"
-  researchgate     : "https://www.researchgate.net/profile/Thomas_Louf"
+  researchgate     :
   uri              :
   github           : "TLouf"
   linkedin         :
@@ -96,9 +96,10 @@ author:
   stackoverflow    : # http://stackoverflow.com/users/123456/username
   mastodon         : "https://fosstodon.org/@tlouf"
   twitter          :
+  bluesky          : "tlouf"
   youtube          :
   wikipedia        :
-  figshare         : "https://figshare.com/authors/Thomas_Louf/9441395"
+  figshare         :
   osf              : "https://osf.io/nb6sh"
 
 

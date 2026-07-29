@@ -1,31 +1,87 @@
-A Github Pages template for academic websites. This was forked (then detached) by [Stuart Geiger](https://github.com/staeiou) from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/), which is © 2016 Michael Rose and released under the MIT License. See LICENSE.md.
+# Academic website (Typst bundle prototype)
 
-I think I've got things running smoothly and fixed some major bugs, but feel free to file issues or make pull requests if you want to improve the generic template / theme.
+A small personal academic website built entirely in [Typst](https://typst.app),
+using its experimental **bundle** export target to produce a multi-page
+static site (`index.html`, `publications.html`, `teaching.html`, plus
+assets) from a single `typst compile` invocation. No JavaScript build step,
+no Node, no external Typst packages — just the compiler.
 
-### Note: if you are using this repo and now get a notification about a security vulnerability, delete the Gemfile.lock file. 
+Visual style is a restrained, serif, tufte-inspired academic look (in the
+spirit of [`tufted`](https://github.com/vsheg/tufted)), reimplemented here
+directly with the bundle API rather than `tufted`'s per-page `make` build.
 
-# Instructions
+## Requirements
 
-1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
-1. Fork [this repository](https://github.com/academicpages/academicpages.github.io) by clicking the "fork" button in the top right. 
-1. Go to the repository's settings (rightmost item in the tabs that start with "Code", should be below "Unwatch"). Rename the repository "[your GitHub username].github.io", which will also be your website's URL.
-1. Set site-wide configuration and create content & metadata (see below -- also see [this set of diffs](http://archive.is/3TPas) showing what files were changed to set up [an example site](https://getorg-testacct.github.io) for a user with the username "getorg-testacct")
-1. Upload any files (like PDFs, .zip files, etc.) to the files/ directory. They will appear at https://[your GitHub username].github.io/files/example.pdf.  
-1. Check status by going to the repository settings, in the "GitHub pages" section
-1. (Optional) Use the Jupyter notebooks or python scripts in the `markdown_generator` folder to generate markdown files for publications and talks from a TSV file.
+- Typst **≥ 0.15**, with the experimental `bundle` and `html` export
+  features (see [Typst's bundle docs](https://typst.app/docs/reference/bundle/)).
+  Both are behind feature flags and **not stable** — expect breakage on
+  future Typst releases.
 
-See more info at https://academicpages.github.io/
+## Build
 
-## To run locally (not on GitHub Pages, to serve on your own computer)
+```sh
+./build.sh            # one-off build into ./dist
+./build.sh --watch     # live-reloading dev server at http://localhost:3000
+```
 
-1. Clone the repository and made updates as detailed above
-1. Make sure you have ruby-dev, bundler, and nodejs installed: `sudo apt install ruby-dev ruby-bundler nodejs`
-1. Run `bundle clean` to clean up the directory (no need to run `--force`)
-1. Run `bundle install` to install ruby dependencies. If you get errors, delete Gemfile.lock and try again.
-1. Run `bundle exec jekyll serve --livereload` to generate the HTML and serve it from `localhost:4000` the local server will automatically rebuild and refresh the pages on change.
+Equivalent to running directly:
 
-# Changelog -- bugfixes and enhancements
+```sh
+TYPST_FEATURES=bundle,html typst compile --format bundle main.typ dist
+```
 
-There is one logistical issue with a ready-to-fork template theme like academic pages that makes it a little tricky to get bug fixes and updates to the core theme. If you fork this repository, customize it, then pull again, you'll probably get merge conflicts. If you want to save your various .yml configuration files and markdown files, you can delete the repository and fork it again. Or you can manually patch. 
+Then serve/upload the contents of `dist/` anywhere static files are served
+(GitHub Pages, Netlify, S3, ...).
 
-To support this, all changes to the underlying code appear as a closed issue with the tag 'code change' -- get the list [here](https://github.com/academicpages/academicpages.github.io/issues?q=is%3Aclosed%20is%3Aissue%20label%3A%22code%20change%22%20). Each issue thread includes a comment linking to the single commit or a diff across multiple commits, so those with forked repositories can easily identify what they need to patch.
+## Project layout
+
+```
+main.typ                 entry point — one #page(...) call per site page
+config.typ                your name, bio, avatar, social links, nav — edit this first
+lib/
+  layout.typ               shared header/nav/footer page shell
+  icons.typ                inline SVG icons for social links
+content/
+  CV/
+    CV.pdf
+    me.bib
+    teaching.typ
+assets/
+  avatar.png                 your profile picture (replace this)
+  favicon.ico
+build.sh
+```
+
+## Updating content
+
+**Home page / bio / socials** — edit `config.typ`.
+
+**Profile picture** — replace `assets/avatar.png` with your own image (any
+raster format Typst supports: PNG, JPEG, ...) and update `site.avatar` in
+`config.typ` if you rename it. It's embedded directly into the HTML as a
+data URI, so there's nothing else to wire up.
+
+**Publications** — edit `content/CV/me.bib` directly. Every entry in
+the file is rendered, in the citation order determined by the `style:`
+argument passed to `bibliography(...)` in `main.typ` (currently `"apa"`;
+any [CSL style name or path](https://typst.app/docs/reference/model/bibliography/)
+works, e.g. `"ieee"`).
+
+**Teaching** — each course is a dictionary entry in `content/CV/teaching.typ`.
+
+## Extending
+
+- **New page**: add another `#page("newpage.html", ...)[ ... ]` block to
+  `main.typ` and an entry in `nav-items` in `config.typ`.
+- **New icons**: download a pack from https://ecstrema.github.io/iconify-typst/ and place the JSON in `assets/`.
+- **CV / extra files**: use `#asset("cv.pdf", read("content/cv.pdf", encoding: none))`
+  in `main.typ` to copy any file into the bundle verbatim.
+
+## Known limitations (prototype status)
+
+- Bundle & HTML export are experimental Typst features; behavior may change
+  across Typst versions.
+- `<style>`/`<link>` tags are currently emitted in `<body>` rather than
+  `<head>`, since bundle export doesn't yet hoist elements to `<head>`.
+  This renders correctly in all modern browsers but isn't strictly
+  spec-compliant.

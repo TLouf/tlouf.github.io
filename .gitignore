@@ -1,4 +1,2 @@
-_site/
-.venv/
-.vscode
-*/.ipynb_checkpoints
+dist/
+*.pdf

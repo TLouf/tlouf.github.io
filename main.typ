@@ -53,43 +53,26 @@
   You can also find my articles on my #link(socials.openalex.url)[#socials.openalex.label] or #link(socials.google-scholar.url)[#socials.google-scholar.label] profiles.
 
   #let works = (
-    yaml("content/CV/me.yaml")
-      .at("references")
-      .sorted(
-        key: w => str(w.at("issued", default: "")),
-      )
-      .rev()
+    yaml("content/CV/me.yaml").at("references")
+  )
+  #let sections = (
+    (title: [= Journal articles], types: ("article", "article-journal")),
+    (title: [= Book chapters], types: ("chapter", "book")),
+    (title: [= Conference proceedings], types: "paper-conference"),
+    (title: [= My PhD thesis], types: "thesis"),
   )
 
-  = Journal articles
+  #for sec in sections {
+    sec.title
 
-  #for work in works {
-    if work.at("type", default: "misc") in ("article", "article-journal") {
-      cite(label(work.id), form: none)
+    for work in works {
+      if work.at("type", default: "misc") in sec.types {
+        cite(label(work.id), form: none)
+      }
     }
+
+    bibliography("content/CV/me.bib", title: none, style: "assets/apa-cv.csl")
   }
-
-  #bibliography("content/CV/me.bib", title: none, style: "apa")
-
-  = Book chapters
-
-  #for work in works {
-    if work.at("type", default: "misc") in ("chapter", "book") {
-      cite(label(work.id), form: none)
-    }
-  }
-
-  #bibliography("content/CV/me.bib", title: none, style: "apa")
-
-  = Conference proceedings
-
-  #for work in works {
-    if work.at("type", default: "misc") == "paper-conference" {
-      cite(label(work.id), form: none)
-    }
-  }
-
-  #bibliography("content/CV/me.bib", title: none, style: "apa")
 ]
 
 

@@ -1,0 +1,3 @@
+[submodule "content/CV"]
+	path = content/CV
+	url = https://github.com/TLouf/CV.git

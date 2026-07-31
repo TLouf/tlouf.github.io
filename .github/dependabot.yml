@@ -1,7 +1,9 @@
 version: 2
 
 updates:
-  - package-ecosystem: gitsubmodule
+  - package-ecosystem: "gitsubmodule"
+    directory: "/"
+    allow:
+      - dependency-name: "content/CV"
     schedule:
-        interval: "daily"
-    directory: /
+      interval: "daily"

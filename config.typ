@@ -19,6 +19,11 @@
 // The paragraphs of your "About" text on the home page.
 #let intro = [
   I joined the GISC and Universidad Carlos III de Madrid as an assistant professor in 2025. Previously, I pursued my PhD in physics of complex systems at the Institute for Cross-Disciplinary Physics and Complex Systems, in Palma. My thesis approached issues in sociolinguistics with a complexity science lens. In 2023, I moved to Trento to work as a postdoctoral researcher at the Fondazione Bruno Kessler. There, I collaborated in the AI4Trust and Bologna Digital Twin projects, still bringing in complexity approaches, but this time to applications in detection of misinformation spread in online social networks, and in urban mobility behaviour, respectively. All in all, my research centers on the mathematical modeling of human behaviour in social interactions.
+  More specifically, my interests can be briefly listed as follows:
+  - (mis)information diffusion,
+  - temporal networks,
+  - interactions in urban mobility,
+  - open source and more generally open science.
 ]
 
 

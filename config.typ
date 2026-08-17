@@ -9,8 +9,7 @@
   name: "Thomas Louf",
   tagline: "Assistant professor of applied maths",
   description: "Personal academic website of Thomas Louf",
-  affiliation: "Grupo Interdisciplinar de Sistemas Complejos (GISC), Departamento de
-  Matemáticas, Universidad Carlos III de Madrid",
+  affiliation: [#link("https://gisc.uc3m.es/")[Grupo Interdisciplinar de Sistemas Complejos (GISC)], #link("https://www.uc3m.es/mathematics-department/home")[Departamento de Matemáticas, Universidad Carlos III de Madrid]],
   avatar: "assets/avatar.png",
   email: "tlouf@math.uc3m.es",
   github-username: "tlouf",
@@ -40,7 +39,6 @@
     url: "https://scholar.google.com/citations?user=sh5mm9YAAAAJ&hl=en",
   ),
   bluesky: (label: "Bluesky", icon: "fa7-brands:bluesky", url: "https://bsky.app/profile/tlouf.bsky.social"),
-  affiliation: (label: "GISC", icon: "fa7-solid:people-group", url: "https://gisc.uc3m.es/"),
   orcid: (label: "ORCID", icon: "fa7-brands:orcid", url: "https://orcid.org/0000-0002-8785-8063"),
   osf: (label: "OSF", icon: "academicons:osf", url: "https://osf.io/nb6sh"),
 )

@@ -130,3 +130,7 @@
 #asset("favicon.ico", read("assets/favicon.ico", encoding: none))
 #asset("CV.pdf", read("content/CV/CV.pdf", encoding: none))
 #asset("publications.bib", read("content/CV/me.bib", encoding: none))
+
+#for file in read("content/theses/index").trim("\n").split("\n") {
+  asset(file, read(file, encoding: none))
+}

@@ -220,6 +220,20 @@ footer {
   border-top: 1px solid var(--rule);
 }
 
+@media (max-width: 760px) {
+  body {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .header-inner,
+  main.content,
+  footer {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
 @media (max-width: 520px) {
   .hero { flex-direction: column; align-items: center; text-align: center; }
   .social-links { justify-content: center; }
